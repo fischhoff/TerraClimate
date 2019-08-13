@@ -1,8 +1,7 @@
 TerraClimate
 ================
 
-install and load libraries
-==========================
+#### install and load libraries
 
 ``` r
 pkgTest <- function(x)
@@ -19,8 +18,7 @@ for (package in neededPackages){pkgTest(package)}
 
     ## Loading required package: sp
 
-define function getTerra. source: <https://rdrr.io/github/MoisesExpositoAlonso/rbioclim/src/R/getTerra.R>
-=========================================================================================================
+#### define function getTerra. source: <https://rdrr.io/github/MoisesExpositoAlonso/rbioclim/src/R/getTerra.R>
 
 ``` r
 #' getTerra
@@ -109,8 +107,7 @@ getTerra<-function(start=1958,end=2017,byyear=10,listyears=NULL,variableclim='pp
 }
 ```
 
-use getTerra to download data. Note: each year's file is ~58 MB.
-================================================================
+#### use getTerra to download data. Note: each year's file is ~58 MB.
 
 ``` r
 getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='data_terra_climate')
@@ -213,18 +210,18 @@ getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='d
     ## coord. ref. : +proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0 
     ## names       : precipitation_amount.1, precipitation_amount.2, precipitation_amount.3, precipitation_amount.4, precipitation_amount.5, precipitation_amount.6, precipitation_amount.7, precipitation_amount.8, precipitation_amount.9, precipitation_amount.10, precipitation_amount.11, precipitation_amount.12
 
-read in one netCDF file as raster and plot
-==========================================
+#### read in one netCDF file as raster and plot
 
 ``` r
-r = raster("data_terra_climate/TerraClimate_ppt_1958.nc")
+#use brick to read in all the layers
+r = brick("data_terra_climate/TerraClimate_ppt_1958.nc")
 ```
 
     ## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
     ## If that is not correct, you can set it to one of: ppt, station_influence
 
 ``` r
-plot(r)
+plot(r[[1]])
 ```
 
-![](TerraClimate_files/figure-markdown_github/plot_one-1.png)
+![](TerraClimate_files/figure-markdown_github/read_plot_one-1.png)
