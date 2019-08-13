@@ -7,8 +7,24 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#define function getTerra. source: https://rdrr.io/github/MoisesExpositoAlonso/rbioclim/src/R/getTerra.R
+#install and load libraries
 ```{r}
+pkgTest <- function(x)
+{
+  if (x %in% rownames(installed.packages()) == FALSE) {
+    install.packages(x, dependencies= TRUE)    
+  }
+  library(x, character.only = TRUE)
+}
+neededPackages <- c("raster")
+
+for (package in neededPackages){pkgTest(package)}
+
+```
+
+
+#define function getTerra. source: https://rdrr.io/github/MoisesExpositoAlonso/rbioclim/src/R/getTerra.R
+```{r getTerra}
 
 #' getTerra
 #' Query and load into R data from http://www.climatologylab.org/terraclimate.html
@@ -96,7 +112,14 @@ getTerra<-function(start=1958,end=2017,byyear=10,listyears=NULL,variableclim='pp
 }
 ```
 
-```{r}
+#use getTerra to download data. Note: each year's file is ~58 MB. 
+```{r get_data}
 getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='data_terra_climate')
+```
+
+#read in one netCDF file as raster and plot
+```{r plot_one}
+r = raster("data_terra_climate/TerraClimate_ppt_1958.nc")
+plot(r)
 ```
 
