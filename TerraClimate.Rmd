@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#define function
+#define function getTerra. source: https://rdrr.io/github/MoisesExpositoAlonso/rbioclim/src/R/getTerra.R
 ```{r}
 
 #' getTerra
@@ -97,6 +97,6 @@ getTerra<-function(start=1958,end=2017,byyear=10,listyears=NULL,variableclim='pp
 ```
 
 ```{r}
-#getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='data_terra_climate')
+getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='data_terra_climate')
 ```
 

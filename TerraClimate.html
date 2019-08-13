@@ -188,8 +188,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="define-function" class="section level1">
-<h1>define function</h1>
+<div id="define-function-getterra.-source-httpsrdrr.iogithubmoisesexpositoalonsorbioclimsrcrgetterra.r" class="section level1">
+<h1>define function getTerra. source: <a href="https://rdrr.io/github/MoisesExpositoAlonso/rbioclim/src/R/getTerra.R" class="uri">https://rdrr.io/github/MoisesExpositoAlonso/rbioclim/src/R/getTerra.R</a></h1>
 <pre class="r"><code>#' getTerra
 #' Query and load into R data from http://www.climatologylab.org/terraclimate.html
 #'
@@ -274,7 +274,99 @@ getTerra&lt;-function(start=1958,end=2017,byyear=10,listyears=NULL,variableclim=
   message('Done')
   return(r)
 }</code></pre>
-<pre class="r"><code>#getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='data_terra_climate')</code></pre>
+<pre class="r"><code>getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='data_terra_climate')</code></pre>
+<pre><code>## Loading required package: raster</code></pre>
+<pre><code>## Loading required package: sp</code></pre>
+<pre><code>## data_terra_climate/TerraClimate_ppt_1958.nc</code></pre>
+<pre><code>## Loading required namespace: ncdf4</code></pre>
+<pre><code>## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence</code></pre>
+<pre><code>## data_terra_climate/TerraClimate_ppt_1968.nc</code></pre>
+<pre><code>## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence
+
+## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
+## If that is not correct, you can set it to one of: ppt, station_influence</code></pre>
+<pre><code>## Done</code></pre>
+<pre><code>## [[1]]
+## class       : RasterStack 
+## dimensions  : 4320, 8640, 37324800, 12  (nrow, ncol, ncell, nlayers)
+## resolution  : 0.04166667, 0.04166667  (x, y)
+## extent      : -180, 180, -90, 90  (xmin, xmax, ymin, ymax)
+## coord. ref. : +proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0 
+## names       : precipitation_amount.1, precipitation_amount.2, precipitation_amount.3, precipitation_amount.4, precipitation_amount.5, precipitation_amount.6, precipitation_amount.7, precipitation_amount.8, precipitation_amount.9, precipitation_amount.10, precipitation_amount.11, precipitation_amount.12 
+## 
+## 
+## [[2]]
+## class       : RasterStack 
+## dimensions  : 4320, 8640, 37324800, 12  (nrow, ncol, ncell, nlayers)
+## resolution  : 0.04166667, 0.04166667  (x, y)
+## extent      : -180, 180, -90, 90  (xmin, xmax, ymin, ymax)
+## coord. ref. : +proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0 
+## names       : precipitation_amount.1, precipitation_amount.2, precipitation_amount.3, precipitation_amount.4, precipitation_amount.5, precipitation_amount.6, precipitation_amount.7, precipitation_amount.8, precipitation_amount.9, precipitation_amount.10, precipitation_amount.11, precipitation_amount.12</code></pre>
 </div>
 
 
