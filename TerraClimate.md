@@ -38,8 +38,8 @@ for (package in neededPackages){pkgTest(package)}
 getTerra<-function(start=1958,end=2017,byyear=10,listyears=NULL,variableclim='ppt',path='data'){
   stopifnot(variableclim %in% c('tmax','tmin','ppt'))
   stopifnot(start>=1958)
-  stopifnot(end<2018)
-  stopifnot(start<end)
+  stopifnot(end<2019)#originally was 2018
+  stopifnot(start<=end)#originally <
   stopifnot(byyear>=1 )
   if(is.null(listyears)) listyears<-seq(start,end,byyear)
 
@@ -110,10 +110,10 @@ getTerra<-function(start=1958,end=2017,byyear=10,listyears=NULL,variableclim='pp
 #### use getTerra to download data. Note: each year's file is ~58 MB.
 
 ``` r
-getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='data_terra_climate')
+getTerra(start=2017,end=2018,byyear=1,listyears=NULL,variableclim='ppt',path='data_terra_climate')
 ```
 
-    ## data_terra_climate/TerraClimate_ppt_1958.nc
+    ## data_terra_climate/TerraClimate_ppt_2017.nc
 
     ## Loading required namespace: ncdf4
 
@@ -153,7 +153,7 @@ getTerra(start=1958,end=1968,byyear=10,listyears=NULL,variableclim='ppt',path='d
     ## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
     ## If that is not correct, you can set it to one of: ppt, station_influence
 
-    ## data_terra_climate/TerraClimate_ppt_1968.nc
+    ## data_terra_climate/TerraClimate_ppt_2018.nc
 
     ## Warning in .varName(nc, varname, warn = warn): varname used is: ppt
     ## If that is not correct, you can set it to one of: ppt, station_influence
